@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>BacBon Tutors | Virtual Class</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://live-class.joogle.xyz/external_api.js"></script>
+        <script src="myapp3.js"></script>
+        
+        <script>
+            $(function(){
+                BindEvent();
+
+                $('#btnStart').on('click',function(){
+                    var meetingId = $('#txtMeetingId').val();
+                    var dispNme = $('#txtDispNme').val();
+                    StartMeeting(meetingId,dispNme);
+
+                    //==============================
+                    console.log("Meeting ID is: ")
+                    console.log(meetingId)
+                });
+            });
+            var student_list = [
+            {name: 'Audi', mobile:'0123648969'}, 
+            {name: 'BMW', mobile:'0123648969'}, 
+            {name: 'Ferrari', mobile:'0123648969'}, 
+            {name: 'Mercedes', mobile:'0123648969'}, 
+            {name: 'Maserati', mobile:'0123648969'}
+            ];
+
+            
+            
+        </script>
+        
+        
+    </head>
+    <body>
+        <div class="container">
+            </br>
+            <h2>Your Students List</h2>
+            <table border=1 class="table table-striped">
+                <script>
+                    for (var i in student_list)
+                    {
+                        document.write('<tr>'+'<td>' + student_list[i].name + '</td>' + '<td>' + student_list[i].mobile +'</td>'+ '<td>' + <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button> + '</td>'+ '<tr>');
+                    }
+                </script>
+            </table>
+            <p>Please click "start class" button to initialize the class for desired student.</p>
+            </br>      
+            <p>Resize the browser window to see the effect.</p>
+            </br>       
+            <div class="row">
+                <div class="col-sm-6" style="background-color:yellow;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+                <div class="col-sm-6" style="background-color:pink;">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
